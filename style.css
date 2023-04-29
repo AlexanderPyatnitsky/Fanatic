@@ -1,0 +1,372 @@
+*
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+:root {
+    --black: #262C27;
+    --Vivid-lime-green: #B9C400;
+    --white-background: #FFFFFF;
+    --Dark-cyan: #0093a1;
+    --trans-dur-and-func: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body {
+    /* font-family: 'Comfortaa', cursive; */
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.2;
+    color: var(--black) 
+}
+/*=========== reset class ==========*/
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+
+.list-reset {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.linc-reset {
+    text-decoration: none;
+    color: inherit;
+}
+/*=========== reset class ==========*/
+
+.container {
+    max-width: 1230px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+/* ---------- Header ---------- */
+.header {
+    position: relative;
+    min-height: 100vh;
+    background-image: url(images/header-fone.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+    
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 390px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: translateY(45%);
+    z-index: 2;
+    background-image: url(images/Forest.svg);
+}
+
+.header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 390px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: translateY(84%) rotate(180deg);
+    z-index: 3;
+    background-image: url(images/Forest.svg);
+}
+
+.header__top {
+    display: flex;
+    align-items: center;
+    padding: 57px 0;
+    /* gep: 100px; */
+    /* justify-content: flex-end; */
+}
+/* Логотип */
+.header__logo {
+    margin-left: auto;
+}
+
+.header__logo-icon {
+    transition:  fill var(--trans-dur-and-func);
+}
+
+.header__logo-icon:hover,
+.header__logo-icon:focus {
+    fill: var(--Dark-cyan);
+}
+/* Кнопка */
+/* .header__btn {
+    margin-left: 101px;
+} */
+
+.header__btn-item {
+    font-family: 'Comfortaa', cursive;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: 0em;
+    text-align: left;
+    text-transform: uppercase;
+    margin-left: 101px;
+    color: var(--white-background);
+
+    background-color: var(--black);
+    border: transparent;
+    transition: background-color var(--trans-dur-and-func), color var(--trans-dur-and-func);
+    cursor: pointer;
+
+    padding: 12px 77px;
+}
+
+.header__btn-item:hover,
+.header__btn-item:focus {
+    background-color: var(--Vivid-lime-green);
+    color: var(--black);
+}
+/* Контакти */
+.contact {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.2;
+    margin-left: 103px;
+    text-align: center;
+    transition: color var(--trans-dur-and-func);
+    margin-right: 20px;
+    /* color: var(--black); */
+}
+
+.contact:hover,
+.contact:focus {
+    color: var(--Dark-cyan);
+}
+/* Декор шапки */
+.header__hero {
+    position: relative;
+    min-height: calc(100vh - 160px);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    z-index: 4;
+}
+.header__hero-content-box {
+    /* position: absolute; */
+    /* right: 20px; */
+    /* top: 260px; */
+    text-align: center;
+    max-width: 550px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-right: 30px;
+    justify-content: flex-end;
+}
+.header__hero-title {
+    font-family: 'Comfortaa', cursive;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 1.1;
+    text-transform: uppercase;
+    color: var(--white-background);
+}
+.header__hero-title-text {
+    font-family: 'Comfortaa';
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.1;
+    margin-top: 20px;
+    color: var(--white-background);
+}
+
+.header_hero-decor-text-top {
+    position: absolute;
+    top: 580px;
+    right: 170px;
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 130px;
+    line-height: 1.1;
+    color: var(--Dark-cyan);
+    opacity: 0.3;
+    bottom: 0;
+    z-index: 1;
+}
+
+.header_hero-decor-text-bottom {
+    position: absolute;
+    top: 650px;
+    right: 600px;
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 130px;
+    line-height: 1.11;
+    color: var(--Dark-cyan);
+    opacity: 0.3;
+    z-index: 1;
+    bottom: 0;
+}
+
+.header_hero-decor-text {
+    position: absolute;
+    right: 165px;
+    /* bottom: -85px; */
+    max-width: 360px;
+    text-align: center;
+
+
+    font-style: italic;
+    font-weight: 300;
+    font-size: 32px;
+    line-height: 1.2;
+    color: var(--Dark-cyan);
+    bottom: 0;
+    z-index: 4;
+}
+/* ---------- Header ---------- */
+/* ========== Main ========== */
+.info {
+    position: relative;
+
+    background-image: url(images/Fanatic_RayAirPocket.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    top: 14px;
+
+}
+
+.info::before {
+    content: '';
+    position: absolute;
+    height: 110px;
+    background-color: var(--black);
+    top: 0;
+    right: 0;
+    left: 0;
+    transform: translateY(-20px);
+}
+
+.info__inner {
+    display: flex;
+    gap: 87px;
+    padding-top: 75px;
+    margin-bottom: 70vh;
+}
+.info__top-text {
+    position: relative;
+    padding-top: 290px;
+    max-width: 290px;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.2;
+    color: var(--white-background);
+}
+
+.info__top-text-one {
+    padding-bottom: 125px;
+}
+
+.info__top-text-two {
+    border-bottom: 1px solid white;
+}
+
+.popup-btn {
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    text-align: center;
+    /* width: 70px;
+    height: 70px; */
+
+}
+.popup-btn span {
+    display: block;
+    padding-top: 12px;
+    color: var(--white-background);
+}
+
+.info-btn {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 0 0;
+}
+
+.sup-img {
+    right: -13px;
+    z-index: 5;
+}
+
+.specs {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.specs__title {
+    margin-right: 200px;
+
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 1.1;
+    color: var(--white-background);
+}
+.specs__list {
+    border-top: 1px solid var(--white-background);
+    border-bottom: 1px solid var(--white-background);
+    padding: 20px 0;
+}
+.specs__list-item {
+    display: flex;
+    justify-content: start;
+}
+
+.specs__list-item-top {
+    
+}
+
+.specs__list-item-caption {
+    width: 178px;
+    margin-right: 25px;
+
+
+    font-family: inherit;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    color: var(--white-background);
+}
+
+.specs__list-item:not(:last-child) {
+    padding-bottom: 20px;
+}
+    
+
+
+.specs__list-item-text {
+    /* padding-top: 20px; */
+
+    font-family: inherit;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.2;
+    color: var(--white-background);
+}
+/* ========== Main ========== */
+
